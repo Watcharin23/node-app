@@ -7,7 +7,13 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
+app.get('/app/info', (req, res) => {
+    res.send('Middleware');
+});
 
+app.get('/app/info', (req, res) => {
+    res.send('end point');
+});
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
